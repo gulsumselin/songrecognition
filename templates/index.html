@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ses Tanıma</title>
+    <style>
+        /* Sayfa stili */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+        }
+
+        /* Ana kapsayıcı */
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Buton stili */
+        button {
+            background-color: #ffffff;
+            color: #6a11cb;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            border-radius: 30px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+            color: #666666;
+            cursor: not-allowed;
+        }
+
+        button:hover:not(:disabled) {
+            background-color: #6a11cb;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Kayıt durumu */
+        #status {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        /* Tahmin sonuçları */
+        #results {
+            margin-top: 20px;
+            font-size: 1rem;
+            text-align: left;
+        }
+    </style>
+    <script>
+        let mediaRecorder;
+        let audioChunks = [];
+
+        function startRecording() {
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    mediaRecorder = new MediaRecorder(stream);
+                    mediaRecorder.start();
+
+                    // Kayıt durumunu güncelle
+                    document.getElementById('status').innerText = "Kayıt yapılıyor...";
+                    document.getElementById('status').style.color = "red";
+                    document.getElementById('startButton').disabled = true;
+                    document.getElementById('stopButton').disabled = false;
+
+                    mediaRecorder.ondataavailable = event => {
+                        audioChunks.push(event.data);
+                    };
+
+                    mediaRecorder.onstop = () => {
+                        const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                        const formData = new FormData();
+                        formData.append('audio_data', audioBlob, 'recorded_audio.wav');
+
+                        fetch('/predict', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.results) {
+                                const resultsDiv = document.getElementById('results');
+                                resultsDiv.innerHTML = '<h3>Tahminler:</h3>';
+                                data.results.forEach((result, index) => {
+                                    resultsDiv.innerHTML += `<p>${index + 1}. ${result.artist} - Olasılık: ${(result.probability * 100).toFixed(2)}%</p>`;
+                                });
+                            } else {
+                                alert(data.error || 'Bir hata oluştu.');
+                            }
+                        })
+                        .catch(error => alert('Tahmin sırasında bir hata oluştu: ' + error));
+                        
+                        // Kayıt durumu sıfırla
+                        document.getElementById('status').innerText = "Kayıt durduruldu.";
+                        document.getElementById('status').style.color = "green";
+                        document.getElementById('startButton').disabled = false;
+                        document.getElementById('stopButton').disabled = true;
+
+                        audioChunks = [];  // Belleği temizle
+                    };
+                })
+                .catch(() => alert('Mikrofon erişimi gerekli!'));
+        }
+
+        function stopRecording() {
+            if (mediaRecorder) {
+                mediaRecorder.stop();
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Ses Tanıma Uygulaması</h1>
+        <button id="startButton" onclick="startRecording()">Kaydı Başlat</button>
+        <button id="stopButton" onclick="stopRecording()" disabled>Kaydı Durdur</button>
+        <div id="status">Kayıt durumu: Hazır.</div>
+        <div id="results"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+Test Accuracy: 85.31%
+
+Sýnýf Bazlý Performans Raporu:
+                       precision    recall  f1-score   support
+
+                Adele       0.80      1.00      0.89         4
+          Ajda Pekkan       0.60      0.75      0.67         4
+         Aleyna Tilki       1.00      1.00      1.00         4
+    AnnenMayKantereit       0.67      0.50      0.57         4
+        Ariana Grande       0.67      1.00      0.80         4
+               Athena       0.80      1.00      0.89         4
+               Ati242       1.00      1.00      1.00         4
+          Aynur Aydýn       0.80      1.00      0.89         4
+         Ayten Alpman       1.00      0.75      0.86         4
+           Ayçin Asan       0.67      1.00      0.80         4
+      Aþkýn Nur Yengi       1.00      0.50      0.67         4
+            BLACKPINK       1.00      0.75      0.86         4
+                BLOK3       1.00      0.75      0.86         4
+          Barýþ Manço       1.00      1.00      1.00         4
+        Batuhan Korel       1.00      0.75      0.86         4
+               Bergen       0.57      1.00      0.73         4
+               Berkay       1.00      0.75      0.86         4
+              Beyonce       0.67      0.50      0.57         4
+        Billie Eilish       1.00      1.00      1.00         4
+         Bülent Ersoy       1.00      1.00      1.00         4
+      Bülent Ortaçgil       0.71      1.00      0.83         5
+           Can Bonomo       1.00      0.75      0.86         4
+             Can Ozan       0.80      1.00      0.89         4
+       Candan Erçetin       1.00      1.00      1.00         4
+           Cem Adrian       1.00      1.00      1.00         4
+           Cem Karaca       0.75      0.75      0.75         4
+      Cengiz Kurtoðlu       1.00      0.75      0.86         4
+         Ceylan Ertem       1.00      1.00      1.00         4
+                 Ceza       1.00      1.00      1.00         4
+           Debublüman       0.50      0.50      0.50         4
+         Demet Akalýn       0.75      0.75      0.75         4
+           Deniz Seki       0.50      0.75      0.60         4
+          Deniz Tekin       0.60      0.75      0.67         4
+       Derya Bedavacý       1.00      0.75      0.86         4
+             Doja Cat       1.00      1.00      1.00         4
+ Dolu Kadehi Ters Tut       1.00      1.00      1.00         4
+             Dua Lipa       0.57      1.00      0.73         4
+                Duman       1.00      1.00      1.00         4
+          Ebru Gündeþ       1.00      1.00      1.00         4
+           Ece Seçkin       1.00      0.50      0.67         4
+           Ed Sheeran       1.00      0.75      0.86         4
+        Edip Akbayram       1.00      1.00      1.00         4
+                 Edis       1.00      0.50      0.67         4
+               Eminem       0.60      0.75      0.67         4
+           Emre Aydýn       1.00      1.00      1.00         4
+          Erkin Koray       1.00      0.75      0.86         4
+          Eylem Aktaþ       1.00      0.75      0.86         4
+                Ezhel       0.80      1.00      0.89         4
+           Fatih Ürek       1.00      1.00      1.00         4
+         Ferdi Tayfur       0.80      1.00      0.89         4
+         Ferhat Göçer       1.00      1.00      1.00         4
+       Fikret Kýzýlok       1.00      0.50      0.67         4
+           Funda Arar       1.00      0.75      0.86         4
+             Gazapizm       0.80      1.00      0.89         4
+       Gece Yolcularý       0.75      0.75      0.75         4
+       Gökhan Türkmen       0.75      0.75      0.75         4
+               Göksel       1.00      0.50      0.67         4
+                Güllü       1.00      0.75      0.86         4
+               Gülþen       0.60      0.75      0.67         4
+               Hadise       1.00      1.00      1.00         4
+          Hakan Altun       1.00      0.75      0.86         4
+               Halsey       1.00      1.00      1.00         4
+         Haluk Levent       0.67      1.00      0.80         4
+          Hande Yener       1.00      1.00      1.00         4
+         Harry Styles       0.80      1.00      0.89         4
+         Hayko Cepkin       1.00      0.75      0.86         4
+              Hümeyra       0.80      1.00      0.89         4
+      Imagine Dragons       0.80      1.00      0.89         4
+       Isak Danielson       0.80      1.00      0.89         4
+       Kahraman Deniz       1.00      1.00      1.00         4
+               Kalben       0.75      0.75      0.75         4
+        Kamuran Akkor       1.00      1.00      1.00         5
+                Karsu       1.00      1.00      1.00         4
+           Katy Perry       0.75      0.75      0.75         4
+         Kenan Doðulu       0.67      0.40      0.50         5
+           Koray Avcý       0.75      0.75      0.75         4
+                 KÖFN       1.00      0.50      0.67         4
+                Kýraç       1.00      0.75      0.86         4
+            Lady Gaga       1.00      1.00      1.00         4
+         Lana Del Rey       1.00      1.00      1.00         4
+        Levent Yüksel       0.67      1.00      0.80         4
+               M Lisa       1.00      1.00      1.00         4
+                  MFÖ       0.80      1.00      0.89         4
+               MOTÝVE       1.00      1.00      1.00         4
+          Mabel Matiz       1.00      1.00      1.00         4
+    Mahsun Kýrmýzýgül       0.75      0.75      0.75         4
+                Manga       1.00      1.00      1.00         4
+             Maroon 5       1.00      0.60      0.75         5
+          Mavi ve Gri       1.00      1.00      1.00         4
+         Mehmet Erdem       1.00      0.75      0.86         4
+          Melek Mosso       1.00      0.50      0.67         4
+         Melike Þahin       0.75      0.75      0.75         4
+          Merve Özbey       1.00      0.80      0.89         5
+          Miley Cyrus       1.00      0.75      0.86         4
+                Model       1.00      0.75      0.86         4
+         Mor ve Ötesi       1.00      0.50      0.67         4
+            Murat Boz       0.80      1.00      0.89         4
+       Murat Dalkýlýç       0.40      0.50      0.44         4
+       Mustafa Sandal       0.50      0.75      0.60         4
+          Nazan Öncel       0.67      0.50      0.57         4
+              Nilüfer       1.00      0.75      0.86         4
+                 No.1       1.00      1.00      1.00         4
+            Onur Akýn       1.00      1.00      1.00         4
+       Orhan Gencebay       1.00      1.00      1.00         5
+          Oðuzhan Koç       1.00      1.00      1.00         4
+          Pilli Bebek       0.67      1.00      0.80         4
+              Pinhani       1.00      1.00      1.00         4
+                Pomme       0.80      1.00      0.89         4
+                Raviþ       0.80      1.00      0.89         4
+              Rihanna       1.00      1.00      1.00         4
+        Sagopa Kajmer       0.80      1.00      0.89         4
+         Selda Baðcan       0.80      1.00      0.89         4
+         Selena Gomez       1.00      0.75      0.86         4
+             Semicenk       0.80      1.00      0.89         4
+     Semiramis Pekkan       0.67      0.50      0.57         4
+           Sena Þener       1.00      1.00      1.00         4
+          SerdarOrtaç       0.60      0.60      0.60         5
+           Sezen Aksu       1.00      1.00      1.00         4
+              Shakira       1.00      0.75      0.86         4
+         Shawn Mendes       1.00      1.00      1.00         4
+            Sibel Can       0.80      1.00      0.89         4
+                Simge       0.67      1.00      0.80         4
+   Soner Sarýkabadayý       0.80      1.00      0.89         4
+                 Sýla       1.00      0.75      0.86         4
+                  TNK       1.00      0.75      0.86         4
+               Tamino       1.00      0.75      0.86         4
+            Tan Taþçý       1.00      0.75      0.86         4
+               Tarkan       1.00      1.00      1.00         4
+         Taylor Swift       1.00      0.75      0.86         4
+               Teoman       0.80      1.00      0.89         4
+           The Weeknd       1.00      1.00      1.00         4
+               Tuðkan       0.80      1.00      0.89         4
+                Yalýn       1.00      1.00      1.00         4
+                Yaþar       1.00      1.00      1.00         4
+           Yaþlý Amca       0.75      0.75      0.75         4
+       Yüksek Sadakat       0.50      0.75      0.60         4
+Yüzyüzeyken Konuþuruz       1.00      1.00      1.00         4
+         Yýldýz Tilbe       1.00      0.75      0.86         4
+                 Zara       1.00      0.75      0.86         4
+           Zeki Müren       1.00      0.75      0.86         4
+        Zeynep Bastýk       0.57      0.80      0.67         5
+
+             accuracy                           0.85       572
+            macro avg       0.88      0.85      0.85       572
+         weighted avg       0.88      0.85      0.85       572
